@@ -2,13 +2,13 @@ def Act_1():
     print("Hello World")
     
 def Act_2():
-    a = input ("Enter a name:")
+    a = input ("Enter your name:")
 
     print ("Hi " + a )
 def Act_3():
     lname = input("Please input your last name here ---> ")
-    fname = input("Please input your fname here ---> ")
-    mname = input("Please input your mname here ---> ")
+    fname = input("Please input your Father's name here ---> ")
+    mname = input("Please input your Mother's here ---> ")
     birthdate = input("Please input your birth date here ---> ")
     birthmonth = input("Please input your birthmonth here ---> ")
     birthyear = input("Please input your birthyear here ---> ")
@@ -36,15 +36,15 @@ def Act_5():
 
     x +=10
 
-    print (x) #5 plus 10 
+    print (x)  
 
     x += 15
 
-    print (x) #form 5 plus 10 to the equal plus 15
+    print (x) 
 
     x -= 15
 
-    print (x) #form the equal to 15 to minus 15
+    print (x) 
 
 def Act_6():
     f = eval(input("enter temperature in Fahrenheit : "))
@@ -276,7 +276,6 @@ def Act_22():
             names.append(askName)
 def Act_23():
     def factorial(factor):
-        """This function is for calculating the factorial of a numver that is provided, it will automatically compute the factorial of the provided number."""
         fact = 1
         for x in range(factor, 0, -1):
             fact *= x
@@ -287,9 +286,6 @@ def Act_23():
 
     help(factorial)
 def Act_24():
-    # from actvity23 import factorial
-
-    # print(f"the factorial of 7 is {factorial(7)} ")
 
     pass
 def Act_25():
@@ -305,7 +301,7 @@ def Act_25():
 
     print(fruits)
 def CC_1():
-    print("\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t *\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\b* * *\n\t\t\t\t\t\t\t\t\t\t\t\t\b\t\t\t\b\b* * * * *\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t    * * * * * * *\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\b\b\b* * * * *\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\b* * *\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t *")
+    print("\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t  *\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\b * * *\n\t\t\t\t\t\t\t\t\t\t\t\t\b\t\t\t\b\b* * * * *\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t    * * * * * * *\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\b\b\b * * * * *\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\b * * *\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t  *")
 def CC_2():
     name = input("please enter your name ---->")
 
@@ -341,7 +337,7 @@ def CC_4():
     print("The quotient of " , number1 , " and " , number2 , " is " , answer4)
 
 def CC_5():
-    print("\nWelcome to the Bank of Capistrano")
+    print("\nWelcome to the Bank of Mamaril")
 
     name = input("\nPlease enter your name > ")
 
@@ -384,25 +380,23 @@ def CC_5():
     print("\t\t\t|________________|______________|")
 
 def CC_6():
-        name = input("Enter your name: ")
-        prelim = eval(input("Enter your Prelim grade: "))
-        midterm = eval(input("Enter your Midterm grade: "))
-        semifinal = eval(input("Enter your Semifinals grade: "))
-        quiz = eval(input("Enter your quiz grade: "))
-        finals = eval(input("Enter your Finals grade: "))
-        project = eval(input("Enter your project grade: "))
+    blck1 = eval(input("\nEnter your grades in Prelims ---> "))
+    blck2 = eval(input("\nEnter your grades in Midterms ---> "))
+    blck3 = eval(input("\nEnter your grades in Semi-Finals ---> "))
+    blck4 = eval(input("\nEnter your grades in Finals ---> "))
+    blck5 = eval(input("\nEnter your grades in Quizzes ---> "))
+    blck6 = eval(input("\nEnter your grades in Projects ---> "))
 
-        FG = (prelim * .15) + (midterm * .15) + (semifinal * .15) + (finals * .15) + (quiz * .15) + (project * .25)
-
-        if FG > 100:
-            print(f"Result:" , FG)
-            print(f"your grade is too high {name}!")
-        elif FG >= 75:
-            print(f"Result:" , FG)
-            print("congrats you passed")
+    if (blck1 >= 65 and blck1 <=100) and (blck2 >= 65 and blck2 <=100) and (blck3 >= 65 and blck3 <=100) and (blck4 >= 65 and blck4 <=100) and (blck5 >= 65 and blck5 <=100) and (blck6 >= 65 and blck6 <=100):
+        brtt = (blck1 * 0.15) + (blck2 * 0.15) + (blck3 * 0.15) + (blck4 * 0.15) + (blck5 * 0.25) + (blck6 * 0.15) 
+        if brtt >= 75:
+            print("\nCongratulations for passing the Semester ")
+            print(f"\nThis is your grades for the Semester {brtt} ")
         else:
-            print("Result:" , FG)
-            print("You failed, study more.")
+            print("\nYou failed for the Semester ")
+            print(f"\nThis is your grades for the Semester {brtt} ")
+    else:
+        print("\nInvalid Input")
 def CC_7():
     A = input("DID YOU BUY A MEAT GOOD/s (yes/no)? ")
     if A.upper() == "YES":
@@ -773,15 +767,16 @@ def main():
                 print("\n\t\t\t\t\t Activity '9'                    Activity '22'")
                 print("\n\t\t\t\t\t Activity '10'                   Activity '23'")
                 print("\n\t\t\t\t\t Activity '11'                   Activity '24'")
-                print("\n\t\t\t\t\t Activity '12'                   Activity '25'")
+                print("\n\t\t\t\t\t Activity '12'                   Activity '15'")
                 print("\n\t\t\t\t\t Activity '13'")
                 print("")
-                print("\n\t\t\t\t\t 'Exit")
+                print("\n\t\t\t\t\t                 'Exit'                      ")
                 print()
                 program = input ("Enter a number: ")
 
-                if program.lower() == "Exit":
-                    break
+                if program.lower() == "exit":
+                    return main()
+
                 elif program != "Exit":
 
                     if program == "1":
@@ -1055,7 +1050,7 @@ def main():
             print("\n\t\t\t\t\t Code Challenge '1'                    Code Challenge '14'")
             print("\n\t\t\t\t\t Code Challenge '2'                    Code Challenge '15'")
             print("\n\t\t\t\t\t Code Challenge '3'                    Code Challenge '16'")
-            print("\n\t\t\t\t\t Code Challenge '4'                    Code Challenge '17'")
+            print("\n\t\t\t\t\t Code Challenge '4'                    ")
             print("\n\t\t\t\t\t Code Challenge '5'")
             print("\n\t\t\t\t\t Code Challenge '6'")
             print("\n\t\t\t\t\t Code Challenge '7'")
@@ -1069,13 +1064,14 @@ def main():
             while True:
                 program = input ("Enter a number:")
 
-                if program.lower() == "Exit":
-                    break
+                if program.lower() == "exit":
+                    return main()
+
                 elif program != "Exit":
 
-                    if program == "3":
+                    if program == "1":
                         CC_1()
-                        a = input ("Would u like to continue exploring my activies?('yes' or 'no') ")
+                        a = input ("Would u like to continue exploring my Code Challenge?('yes' or 'no') ")
                         if a == "yes":
                             continue
                         elif a == "no":
@@ -1085,7 +1081,7 @@ def main():
                             continue
                     elif program == "2":
                         CC_2()
-                        a = input ("Would u like to continue exploring my activies?('yes' or 'no') ")
+                        a = input ("Would u like to continue exploring my Code Challenge?('yes' or 'no') ")
                         if a == "yes":
                             continue
                         elif a == "no":
@@ -1095,7 +1091,7 @@ def main():
                             continue
                     elif program == "3":
                         CC_3()
-                        a = input ("Would u like to continue exploring my activies?('yes' or 'no') ")
+                        a = input ("Would u like to continue exploring my Code Challenge?('yes' or 'no') ")
                         if a == "yes":
                             continue
                         elif a == "no":
@@ -1105,7 +1101,7 @@ def main():
                             continue
                     elif program == "4":
                         CC_4()
-                        a = input ("Would u like to continue exploring my activies?('yes' or 'no') ")
+                        a = input ("Would u like to continue exploring my Code Challenge?('yes' or 'no') ")
                         if a == "yes":
                             continue
                         elif a == "no":
@@ -1115,7 +1111,7 @@ def main():
                             continue
                     elif program == "5":
                         CC_5()
-                        a = input ("Would u like to continue exploring my activies?('yes' or 'no') ")
+                        a = input ("Would u like to continue exploring my Code Challenge?('yes' or 'no') ")
                         if a == "yes":
                             continue
                         elif a == "no":
@@ -1125,7 +1121,7 @@ def main():
                             continue
                     elif program == "6":
                         CC_6()
-                        a = input ("Would u like to continue exploring my activies?('yes' or 'no') ")
+                        a = input ("Would u like to continue exploring my Code Challenge?('yes' or 'no') ")
                         if a == "yes":
                             continue
                         elif a == "no":
@@ -1135,7 +1131,7 @@ def main():
                             continue
                     elif program == "7":
                         CC_7()
-                        a = input ("Would u like to continue exploring my activies?('yes' or 'no') ")
+                        a = input ("Would u like to continue exploring my Code Challenge?('yes' or 'no') ")
                         if a == "yes":
                             continue
                         elif a == "no":
@@ -1145,7 +1141,7 @@ def main():
                             continue
                     elif program == "8":
                         CC_8()
-                        a = input ("Would u like to continue exploring my activies?('yes' or 'no') ")
+                        a = input ("Would u like to continue exploring my Code Challenge?('yes' or 'no') ")
                         if a == "yes":
                             continue
                         elif a == "no":
@@ -1155,7 +1151,7 @@ def main():
                             continue
                     elif program == "9":
                         CC_9()
-                        a = input ("Would u like to continue exploring my activies?('yes' or 'no') ")
+                        a = input ("Would u like to continue exploring my Code Challenge?('yes' or 'no') ")
                         if a == "yes":
                             continue
                         elif a == "no":
@@ -1165,7 +1161,7 @@ def main():
                             continue
                     elif program == "10":
                         CC_10()
-                        a = input ("Would u like to continue exploring my activies?('yes' or 'no') ")
+                        a = input ("Would u like to continue exploring my Code Challenge?('yes' or 'no') ")
                         if a == "yes":
                             continue
                         elif a == "no":
@@ -1175,7 +1171,7 @@ def main():
                             continue
                     elif program == "11":
                         CC_11()
-                        a = input ("Would u like to continue exploring my activies?('yes' or 'no') ")
+                        a = input ("Would u like to continue exploring my Code Challenge?('yes' or 'no') ")
                         if a == "yes":
                             continue
                         elif a == "no":
@@ -1185,7 +1181,7 @@ def main():
                             continue
                     elif program == "12":
                         CC_12()
-                        a = input ("Would u like to continue exploring my activies?('yes' or 'no') ")
+                        a = input ("Would u like to continue exploring my Code Challenge?('yes' or 'no') ")
                         if a == "yes":
                             continue
                         elif a == "no":
@@ -1195,7 +1191,7 @@ def main():
                             continue
                     elif program == "13":
                         CC_13()
-                        a = input ("Would u like to continue exploring my activies?('yes' or 'no') ")
+                        a = input ("Would u like to continue exploring my Code Challenge?('yes' or 'no') ")
                         if a == "yes":
                             continue
                         elif a == "no":
@@ -1205,7 +1201,7 @@ def main():
                             continue
                     elif program == "14":
                         CC_14()
-                        a = input ("Would u like to continue exploring my activies?('yes' or 'no') ")
+                        a = input ("Would u like to continue exploring my Code Challenge?('yes' or 'no') ")
                         if a == "yes":
                             continue
                         elif a == "no":
@@ -1215,7 +1211,7 @@ def main():
                             continue
                     elif program == "15":
                         CC_15()
-                        a = input ("Would u like to continue exploring my activies?('yes' or 'no') ")
+                        a = input ("Would u like to continue exploring my Code Challenge?('yes' or 'no') ")
                         if a == "yes":
                             continue
                         elif a == "no":
@@ -1225,7 +1221,7 @@ def main():
                             continue
                     elif program == "16":
                         CC_16()
-                        a = input ("Would u like to continue exploring my activies?('yes' or 'no') ")
+                        a = input ("Would u like to continue exploring my Code Challenge?('yes' or 'no') ")
                         if a == "yes":
                             continue
                         elif a == "no":
@@ -1234,15 +1230,12 @@ def main():
                             print("Invalid Input")
                             continue
 
-                elif main_choice == "3":
-                    print("\n\t\t\t\t\tThank you for using the program. Goodbye!")
-                    break
-                else:
-                    print("\n\t\t\t\t\tInvalid choice, please choose again.")
-                    continue
+        elif main_choice == "3":
+            print("\n\t\t\t\t\tThank you for using the program. Goodbye!")
+            break
 
         else:
-            print("Invalid Input")
+            print("\n\t\t\t\t\tInvalid choice, please choose again.")
             continue
        
 main()
